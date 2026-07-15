@@ -110,7 +110,7 @@ _Milestones 1–4 constitute the core CIP-56 middleware, indexer, and bridge (fo
   - **Architecture & Design Refresh**: updated diagrams for each signer implementation; deterministic Canton-party derivation from MetaMask seed phrase with new-device recovery; per-key authorization policies for the institutional path; threat models for each signing surface; custody-partner evaluation framework with a go/no-go decision gate at week 4 of the custody workstream.
   - **MetaMask Snap for Canton Signing**: Ed25519 signing inside MetaMask's isolated origin, key material derived deterministically from the user's existing MetaMask seed phrase (so seed-phrase recovery also recovers the Canton party), no key material on the server or on disk outside MetaMask. Browser onboarding (install Snap → allocate external party → register with API server → recover on new device via standard MetaMask flow). Snap published to the MetaMask Snap registry with versioned signed updates.
 - **Acceptance Criteria:** the Snap is published to the MetaMask Snap registry and installable by any user; a non-custodial transfer signed inside the Snap against a CIP-56 token is demonstrable; new-device recovery from the MetaMask seed phrase restores the Canton party.
-- **Amount:** 2,500,000 CC upon committee acceptance.
+- **Amount:** 3,000,000 CC upon committee acceptance.
 
 ### Milestone 6: Institutional Custody + Security Audit + Docs
 
@@ -121,7 +121,7 @@ _Milestones 1–4 constitute the core CIP-56 middleware, indexer, and bridge (fo
   - **Integration Testing, Security Review, and Demo**: end-to-end tests across custodial / Snap / institutional / mixed-mode deployments; **independent third-party security audit** of the Snap (BIP-44 derivation correctness, DER signing flow, dialog prompts, supply-chain posture, manifest permission scope) and of the institutional integration; findings remediated before acceptance; audit reports published under `docs/audits/`.
   - **Documentation & Integrator Guides**: a reference dapp per signer mode (custodial, Snap, institutional), Snap user guide, Snap integration guide for dapp developers, institutional custody deployment guide, updated API reference, per-path threat-model summaries suitable for risk-conscious integrators.
 - **Acceptance Criteria:** at least 1 issuer live on the institutional custody path; independent third-party audit report covering the Snap and institutional integration published under `docs/audits/` with all critical/high findings remediated; integrator guides and per-path threat-model summaries published.
-- **Amount:** 1,500,000 CC upon committee acceptance.
+- **Amount:** 3,000,000 CC upon committee acceptance.
 
 _Milestones 5–6 constitute the non-custodial Snap and institutional custody path (formerly "Phase 2")._
 
@@ -132,7 +132,7 @@ _Milestones 5–6 constitute the non-custodial Snap and institutional custody pa
 - **Deliverables:**
   - **CIP-0112 V2 dual-interface delivery**: V1 and V2 packages running in parallel via Daml module-prefixes (per CIP-0112 §5.2); V2-aware indexer decoder; V2 command builder in the middleware orchestrator selected per token at runtime; bridge updates to use V2 non-holder Account destinations for mint/burn. Timeline is conditional on CIP-0112 ratification — see contingency in Rationale § CIP-112 Migration Plan.
 - **Acceptance Criteria:** V1 and V2 dual-interface support live across the middleware, indexer, and bridge; existing V1 issuers continue operating untouched; a V2 token transfer is demonstrable once CIP-0112 is ratified (subject to the ratification-timing contingency).
-- **Amount:** 7,000,000 CC upon committee acceptance.
+- **Amount:** 5,000,000 CC upon committee acceptance.
 
 ### Milestone 8: Maintenance Year 1 — Sustainment
 
@@ -193,15 +193,15 @@ Acceptance is based on value delivered to the ecosystem, not on artifact deliver
 | M2 — Middleware JSON-RPC Service | 4,500,000 CC |
 | M3 — Indexer Service | 2,500,000 CC |
 | M4 — Bridge, Relayer & Integration | 4,000,000 CC |
-| M5 — Non-Custodial MetaMask Snap | 2,500,000 CC |
-| M6 — Institutional Custody + Security Audit + Docs | 1,500,000 CC |
-| M7 — Maintenance Year 1: CIP-0112 (V2) Migration | 7,000,000 CC |
+| M5 — Non-Custodial MetaMask Snap | 3,000,000 CC |
+| M6 — Institutional Custody + Security Audit + Docs | 3,000,000 CC |
+| M7 — Maintenance Year 1: CIP-0112 (V2) Migration | 5,000,000 CC |
 | M8 — Maintenance Year 1: Sustainment | 5,000,000 CC |
 | M9 — Maintenance Year 2: Sustainment (First Half) | 5,000,000 CC |
 | M10 — Maintenance Year 2: Sustainment (Second Half) | 5,000,000 CC |
 | **Total** | **40,000,000 CC** |
 
-All milestone payments are made upon committee acceptance of the milestone (M10 upon final release and acceptance). Build milestones (M1–M6) total 18,000,000 CC; maintenance milestones (M7–M10) total 22,000,000 CC. Ecosystem adoption is presented as a plan (see § Ecosystem Adoption Plan) and carries no funding; should the committee request an explicit adoption weighting, it would be funded by reallocating from the maintenance milestones.
+All milestone payments are made upon committee acceptance of the milestone (M10 upon final release and acceptance). Build milestones (M1–M6) total 20,000,000 CC; maintenance milestones (M7–M10) total 20,000,000 CC. Ecosystem adoption is presented as a plan (see § Ecosystem Adoption Plan) and carries no funding; should the committee request an explicit adoption weighting, it would be funded by reallocating from the maintenance milestones.
 
 ### Volatility Stipulation
 
